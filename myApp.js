@@ -51,8 +51,8 @@ app.route("/name").get(function(req, res) {
     name: first_name + " " + last_name
   });
 }).post(function(req, res) {
-  first_name = (req.query["first"] == undefined) ? '' : req.query["first"]
-  last_name = (req.query["last"] == undefined) ? '' : req.query["last"]
+  first_name = (req.body.first == undefined) ? '' : req.body.first
+  last_name = (req.body.last == undefined) ? '' : req.body.last
 
   res.json({
     name: first_name + " " + last_name
